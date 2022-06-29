@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from core.config import settings
+from ecommerce.config import settings
 
 
 def start_application():

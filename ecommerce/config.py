@@ -1,6 +1,10 @@
 from decouple import config
 
-class Settings():
+
+class Settings:
+    PROJECT_NAME: str = "JobSearch"
+    PROJECT_DESCRIPTION: str = "A job platform"
+    PROJECT_VERSION: str = "0.1.0"
     DB_NAME: str = config("DB_NAME")
     DB_USER: str = config("DB_USER")
     DB_HOST: str = config("DB_HOST")
