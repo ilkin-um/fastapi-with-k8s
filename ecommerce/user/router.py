@@ -16,7 +16,6 @@ router = APIRouter(tags=["Users"], prefix="/user")
 async def create_user_registration(
     request: schema.User, database: Session = Depends(db.get_db)
 ):
-    # Read More : Pydantic Validation with Database (https://github.com/tiangolo/fastapi/issues/979)
 
     user = await validator.verify_email_exist(request.email, database)
     if user:
