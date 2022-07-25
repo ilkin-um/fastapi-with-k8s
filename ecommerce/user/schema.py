@@ -1,4 +1,4 @@
-from pydantic import BaseModel, constr, validator, EmailStr
+from pydantic import BaseModel, constr, validator
 
 from ecommerce import db
 from . import models
@@ -6,7 +6,7 @@ from . import models
 
 class User(BaseModel):
     name: constr(min_length=2, max_length=50)
-    email: EmailStr
+    email: str
     password: str
 
 
