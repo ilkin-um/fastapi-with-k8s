@@ -10,6 +10,7 @@ from ecommerce.db import Base
 from ecommerce.user.models import User
 from ecommerce.products.models import Product, Category
 from ecommerce.cart.models import Cart, CartItems
+from ecommerce.orders.models import Order, OrderDetails
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
