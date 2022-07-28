@@ -11,9 +11,9 @@ class Settings:
     DB_PORT: str = config("DB_PORT")
     DB_PASSWORD: str = config("DB_PASSWORD")
     TEST_DB_NAME: str = config("DB_NAME")
-    REDIS_HOST: str = config("DB_NAME")
-    REDIS_PORT: str = config("DB_NAME")
-    REDIS_DB: str = config("DB_NAME")
+    REDIS_HOST: str = config("REDIS_HOST")
+    REDIS_PORT: str = config("REDIS_PORT")
+    REDIS_DB: str = config("REDIS_DB")
 
 
 settings = Settings()

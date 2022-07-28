@@ -10,20 +10,14 @@ def clean_html(raw_html):
     return clean_text
 
 
-# Replace sender@example.com with your "From" address.
-# This address must be verified with Amazon SES.
+
 SENDER = "FastAPI <ilkinum@gmail.com>"
 
-# If necessary, replace us-west-2 with the AWS Region you're using for Amazon SES.
 AWS_REGION = "ap-south-1"
 
-# The subject line for the email.
 SUBJECT = "New Order Placed"
 
-# The email body for recipients with non-HTML email clients.
 
-
-# The HTML body of the email.
 BODY_HTML = """<html>
 <head></head>
 <body>
@@ -69,11 +63,8 @@ def order_notification(recipient):
                 },
             },
             Source=SENDER,
-            # If you are not using a configuration set, comment or delete the
-            # following line
-            # ConfigurationSetName=CONFIGURATION_SET,
+
         )
-    # Display an error if something goes wrong.
     except ClientError as e:
         print(e.response["Error"]["Message"])
     else:
