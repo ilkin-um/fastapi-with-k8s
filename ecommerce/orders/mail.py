@@ -11,9 +11,9 @@ def clean_html(raw_html):
 
 
 
-SENDER = "FastAPI <ilkinum@gmail.com>"
+SENDER = "FastAPI <fastapi_testing@inboxbear.com>"
 
-AWS_REGION = "ap-south-1"
+AWS_REGION = "us-east-1"
 
 SUBJECT = "New Order Placed"
 
